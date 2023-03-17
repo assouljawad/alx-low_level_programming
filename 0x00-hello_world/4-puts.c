@@ -1,7 +1,10 @@
 #include <stdio.h>
-int main(void) 
+/**
+*This my function print something
+**/
+int main(void)
 {
 char text[] = "\"Programming is like building a multilingual puzzle";
 puts(text);
-return 0;
+return (0);
 }

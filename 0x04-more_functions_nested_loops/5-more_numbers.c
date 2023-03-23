@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 /**
 * more_numbers - is functions that checks is the c is digit.
 * Return: if digit return 1 else return 0

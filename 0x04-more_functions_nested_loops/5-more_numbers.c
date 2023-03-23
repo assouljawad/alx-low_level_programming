@@ -5,8 +5,7 @@ i#include "main.h"
 */
 void more_numbers(void)
 {
-	int i;
-	int j;
+	int i, j;
 
 	for (j = 0; j < 10; j++)
 	{
@@ -19,5 +18,5 @@ void more_numbers(void)
 		_putchar((i % 10) + 48);
 	}
 		_putchar('\n');
-	};
+	}
 }

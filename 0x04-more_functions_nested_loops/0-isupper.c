@@ -1,10 +1,9 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
-*_isupper - checks if the c is uppercase
-*@c: is holding the c value
-*Return: returing the c value
+* _isupper - checks if the c is uppercase
+* @c: is holding the c value
+* Return: returing the c value
 */
 
 int _isupper(int c)

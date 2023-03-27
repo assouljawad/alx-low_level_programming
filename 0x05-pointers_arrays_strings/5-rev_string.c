@@ -1,16 +1,29 @@
 #include "main.h"
 /**
-* rev_string  - a poniter to int as argument an change its value.
-* @s: poniter
-* Return: return the lenght of string
-*/
-void rev_string(char *s);
+ * rev_string - reverses a string.
+ * @s: input string.
+ * Return: no return.
+ */
+void rev_string(char *s)
 {
-	int i;
+	int count = 0, i, j;
+	char *str, temp;
 
-	i = 0;
-	while(s[i] == '\0')
+	while (count >= 0)
 	{
-		i++	
+		if (s[count] == '\0')
+			break;
+		count++;
+	}
+	str = s;
+
+	for (i = 0; i < (count - 1); i++)
+	{
+		for (j = i + 1; j > 0; j--)
+		{
+			temp = *(str + j);
+			*(str + j) = *(str + (j - 1));
+			*(str + (j - 1)) = temp;
+		}
 	}
 }

@@ -1,30 +1,27 @@
 #include "main.h"
+
 /**
-* puts_half  - a poniter to int as argument an change its value.
-* @str: poniter
-* Return: no return
-*/
+ * puts_half - prints half of a string.
+ * @str: input string.
+ * Return: no return.
+ */
 void puts_half(char *str)
 {
-	int i, j, len, rem;
+	int count = 0, i;
 
-	len = 0;
-	for (j = 0; str[j] != '\0'; j++)
+	while (count >= 0)
 	{
-		len++;
+		if (str[count] == '\0')
+			break;
+		count++;
 	}
-	rem = len;
-	if (len % 2 != 0)
-	{
-		len = (len - 1) / 2;
-	}
+
+	if (count % 2 == 1)
+		i = count / 2;
 	else
-	{
-		len = len / 2;
-	}
-	for (i = len; i < rem; i++)
-	{
+		i = (count - 1) / 2;
+
+	for (i++; i < count; i++)
 		_putchar(str[i]);
-	}
 	_putchar('\n');
 }

@@ -8,7 +8,8 @@
 
 char *_strchr(char *s, char c)
 {
-	int i, len;
+	unsigned int i;
+	unsigned int len;
 
 	i = 0;
 	len = 0;

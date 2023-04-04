@@ -9,15 +9,8 @@
 char *_strchr(char *s, char c)
 {
 	unsigned int i;
-	unsigned int len;
 
 	i = 0;
-	len = 0;
-	while (s[i] != '\0')
-	{
-		len++;
-		i++;
-	}
 	for (i = 0; i < len; i++)
 	{
 	if (s[i] == c)
@@ -25,8 +18,5 @@ char *_strchr(char *s, char c)
 		return (s + i);
 	}
 	}
-	if (s[i] == '\0')
-	{
-		return (NULL);
-	}
+	return (NULL);
 }

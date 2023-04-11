@@ -1,29 +1,31 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-* *_strdup - cp string new memorey
-* @str: string
-* Return: point to the first address of new string
-*/
+ * _strdup - returns a pointer to a newly allocated space in memory.
+ * @str: string.
+ *
+ * Return: pointer of an array of chars
+ */
 char *_strdup(char *str)
 {
-	int i, j, len;
-	char *p;
+	char *strout;
+	unsigned int i, j, len;
 
-	j = 0;
 	len = 0;
-	while (str[j] != '\0')
+	if (str == NULL)
+		return (NULL);
+	while (str[i] != '\0')
 	{
 		len++;
-		j++;
+		i++;
 	}
-	if (len == 0)
-		return (NULL);
-	p = malloc(sizeof(char) * len);
+	strout = (char *)malloc(sizeof(char) * len);
 
-	for (i = 0; i < len; i++)
-	{
-		p[i] = str[i];
-	}
-	return (p);
+	if (strout == NULL)
+		return (NULL);
+
+	for (j = 0; j <= i; j++)
+		strout[j] = str[j];
+
+	return (strout);
 }

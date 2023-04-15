@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
 * *_realloc - implment of realloc
 * @old_size: size

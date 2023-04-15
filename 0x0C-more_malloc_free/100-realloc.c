@@ -5,27 +5,24 @@
 * @old_size: size
 * @new_size: size
 * @ptr: ptr
-* Return:newptr
+* Return:ptr
 */
-
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *newptr;
-
-	if (new_size == old_size)
-	{
-		return (ptr);
-	}
-	if (ptr == NULL)
-	{
-		newptr = malloc(new_size);
-	}
 	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
+
+	if (ptr == NULL)
+		ptr = malloc(new_size);
+
+	if (new_size == old_size)
+		return (ptr);
+
 	free(ptr);
-	newptr = malloc(new_size);
-	return (newptr);
+	ptr = malloc(new_size);
+
+	return (ptr);
 }
